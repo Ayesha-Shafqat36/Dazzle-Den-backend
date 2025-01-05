@@ -27,6 +27,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/api/user", authRouter);
+app.get('/',(req,res)=>{
+  res.json('Hello World')
+})
 // app.use("/api/user", ()=>{console.log("Hi")});
 app.use("/api/product", productRouter);
 app.use("/api/blog", blogRouter);
